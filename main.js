@@ -24,13 +24,13 @@ function sliderImages() {
         let currentImg
         if (this.classList.contains('btn-next')) {
             currentImg = element.getAttribute('src')
-            if (currentImg !== './images/image-product-4.jpg') {
+            if (!currentImg.includes('./images/image-product-4.jpg')) {
             let nextImg = currentImg.replace(/\d/, function(n){ return ++n })
             element.src = nextImg
             }
         } else {
         currentImg = element.getAttribute('src')
-        if (currentImg !== './images/image-product-1.jpg') {
+        if (!currentImg.includes('./images/image-product-1.jpg')) {
         let nextImg = currentImg.replace(/\d/, function(n){ return --n })
         element.src = nextImg
         }
@@ -39,7 +39,7 @@ function sliderImages() {
         sliderDesktop.forEach(thumbnail => {
             let a = thumbnail.lastChild.getAttribute('src')
             let currentThumbnail = a.replace(/-thumbnail/, '')
-            if (currentThumbnail == currentImg) {
+            if (currentThumbnail.includes(currentImg)) {
                 thumbnail.classList.add('thumbnail-selected')
             } else {
                 thumbnail.classList.remove('thumbnail-selected')
