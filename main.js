@@ -24,7 +24,7 @@ function sliderImages() {
         let currentImg
         if (this.classList.contains('btn-next')) {
             currentImg = element.getAttribute('src')
-            if (currentImg !== './images/image-product-4.jpg') {
+            if (currentImg !== '/images/image-product-4.jpg') {
             let nextImg = currentImg.replace(/\d/, function(n){ return ++n })
             element.src = nextImg
             }
