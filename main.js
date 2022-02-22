@@ -24,13 +24,13 @@ function sliderImages() {
         let currentImg
         if (this.classList.contains('btn-next')) {
             currentImg = element.getAttribute('src')
-            if (!currentImg.includes('./images/image-product-4.jpg')) {
+            if (!currentImg.includes('4')) {
             let nextImg = currentImg.replace(/\d/, function(n){ return ++n })
             element.src = nextImg
             }
         } else {
         currentImg = element.getAttribute('src')
-        if (!currentImg.includes('./images/image-product-1.jpg')) {
+        if (!currentImg.includes('1')) {
         let nextImg = currentImg.replace(/\d/, function(n){ return --n })
         element.src = nextImg
         }
