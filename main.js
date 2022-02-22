@@ -40,7 +40,7 @@ function sliderImages() {
             let a = thumbnail.lastChild.getAttribute('src')
             let currentThumbnail = a.replace('-thumbnail', '')
             let b = currentImg.replace('.', '')
-            if (currentThumbnail.includes(currentImg)) {
+            if (currentThumbnail.includes(b)) {
                 thumbnail.classList.add('thumbnail-selected')
             } else {
                 thumbnail.classList.remove('thumbnail-selected')
@@ -102,7 +102,7 @@ function deleteItems() {
 
 function sliderClick() {
     sliderMain.forEach(element => {
-        let thumbnailImage = this.lastChild.src.replace(/-thumbnail/, '')
+        let thumbnailImage = this.lastChild.src.replace('-thumbnail', '')
         element.src = thumbnailImage
         this.classList.add('thumbnail-selected')
         sliderDesktop.forEach(element => {
