@@ -35,10 +35,11 @@ function sliderImages() {
         element.src = nextImg
         }
         }
-        currentImg = element.getAttribute('src')
         sliderDesktop.forEach(thumbnail => {
+            currentImg = element.getAttribute('src')
             let a = thumbnail.lastChild.getAttribute('src')
-            let currentThumbnail = a.replace(/-thumbnail/, '')
+            let currentThumbnail = a.replace('-thumbnail', '')
+            let b = currentImg.replace('.', '')
             if (currentThumbnail.includes(currentImg)) {
                 thumbnail.classList.add('thumbnail-selected')
             } else {
